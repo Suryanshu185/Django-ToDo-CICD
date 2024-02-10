@@ -49,18 +49,25 @@ sudo docker run -p 8000:8000 e138726e679d (run the docker image and mask the por
 
 
 JENKINS:-
-Install Java → sudo apt install openjdk-11-jre
+Install Java → 
+$sudo apt install openjdk-11-jre
 Then just copy paste this command for jenkins 
 sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
   https://pkg.jenkins.io/debian/jenkins.io-2023.key
 echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
   https://pkg.jenkins.io/debian binary/ | sudo tee \
   /etc/apt/sources.list.d/jenkins.list > /dev/null
+  
 sudo apt-get update
+
 sudo apt-get install jenkins
+
 Then sudo systemctl enable jenkins 
+
 sudo systemctl start jenkins
+
 sudo systemctl status jenkins 
+
 Then add inbound rules to accept traffic from port 8080 (jenkins runs on port 8080)
 
 Now setup an agent in jenkins (performs all the steps for the pipeline)
@@ -69,9 +76,12 @@ If you want the node to run all the shell scripts, run commands basically everyt
 Setup your node as required 
 Now Create a job (job is a pipeline where all the steps will be mentioned and they are executed automatically therefore automating the process)
 THE JOB → THE WHOLE POINT OF JENKINS LIES HERE
-Chmod 777 django-todo (giving permission to all the users so that jenkins agent also has permission to access the files)
+
+$Chmod 777 django-todo (giving permission to all the users so that jenkins agent also has permission to access the files)
 Steps to write the shell script
-cd /home/ubuntu/projects/Django-ToDo-CICD (go into the directory where everything is including the Dockerfile)
+
+cd /home/ubuntu/projects/Django-ToDo-CICD 
+(go into the directory where everything is including the Dockerfile)
 sudo docker build . -t todo-dev
 sudo docker run -d -p 8000:8000 todo-dev
 (if anything happens you can always go to configure the job and fix your shell script)
