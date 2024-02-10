@@ -35,8 +35,6 @@ $ python manage.py runserver
 
 Once the server is hosted, head over to http://127.0.0.1:8000/todos for the App.
 
-Cheers and Happy Coding :)
-
 Create an ec2
 Git clone repo you are working with
 Follow the README
@@ -57,17 +55,18 @@ $sudo apt install openjdk-11-jre```
 Then just copy paste this command for jenkins 
 
 ```bash
-$ sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
+  $sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
   https://pkg.jenkins.io/debian/jenkins.io-2023.key
-echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+  echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
   https://pkg.jenkins.io/debian binary/ | sudo tee \
-  /etc/apt/sources.list.d/jenkins.list > /dev/null
-  ```
+  /etc/apt/sources.list.d/jenkins.list > /dev/null ```
+
 ```bash
 $sudo apt-get update
 ```
-```bash $sudo apt-get install jenkins
-```
+
+```bash $sudo apt-get install jenkins```
+
 Then ```
 bash $sudo systemctl enable jenkins ```
 
