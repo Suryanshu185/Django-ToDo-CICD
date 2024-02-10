@@ -51,7 +51,8 @@ Make a Dockerfile and add all the requirements needed
 
 
 JENKINS:-
-Install Java → ```$sudo apt install openjdk-11-jre```
+Install Java → ```bash 
+$sudo apt install openjdk-11-jre```
 
 Then just copy paste this command for jenkins 
 
@@ -62,15 +63,15 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
   https://pkg.jenkins.io/debian binary/ | sudo tee \
   /etc/apt/sources.list.d/jenkins.list > /dev/null
   ```
-```
+```bash
 $sudo apt-get update
 ```
+```bash $sudo apt-get install jenkins
 ```
-$sudo apt-get install jenkins
-```
-Then ```$sudo systemctl enable jenkins ```
+Then ```
+bash $sudo systemctl enable jenkins ```
 
-```$sudo systemctl start jenkins```
+```bash $sudo systemctl start jenkins```
 ```$sudo systemctl status jenkins ```
 
 Then add inbound rules to accept traffic from port 8080 (jenkins runs on port 8080)
