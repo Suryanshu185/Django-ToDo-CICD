@@ -54,23 +54,25 @@ $sudo apt install openjdk-11-jre```
 
 Then just copy paste this command for jenkins 
 
-```bash
+
   $sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
   https://pkg.jenkins.io/debian/jenkins.io-2023.key
   echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
   https://pkg.jenkins.io/debian binary/ | sudo tee \
-  /etc/apt/sources.list.d/jenkins.list > /dev/null ```
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+  ```
 
 ```$sudo apt-get update```
 
 
 ```bash $sudo apt-get install jenkins```
 
-Then ```
-bash $sudo systemctl enable jenkins ```
+
+```bash $sudo systemctl enable jenkins ```
 
 ```bash $sudo systemctl start jenkins```
 ```$sudo systemctl status jenkins ```
+
 
 Then add inbound rules to accept traffic from port 8080 (jenkins runs on port 8080)
 
