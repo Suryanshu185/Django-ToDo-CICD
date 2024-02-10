@@ -61,9 +61,8 @@ Then just copy paste this command for jenkins
   https://pkg.jenkins.io/debian binary/ | sudo tee \
   /etc/apt/sources.list.d/jenkins.list > /dev/null ```
 
-```bash
-$sudo apt-get update
-```
+```$sudo apt-get update```
+
 
 ```bash $sudo apt-get install jenkins```
 
